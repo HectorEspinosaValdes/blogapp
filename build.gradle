@@ -1,0 +1,27 @@
+buildscript {
+    ext.kotlin_version = "1.7.20"
+    repositories {
+        google()
+
+        mavenCentral()
+    }
+    dependencies {
+
+        def nav_version = "2.5.3"
+
+        classpath "com.android.tools.build:gradle:7.3.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //Firebase
+        classpath 'com.google.gms:google-services:4.3.14'
+        // Firebase Crashlytics Gradle plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+    }
+}
+
+
+task clean(type:Delete){
+    delete rootProject.buildDir
+}
